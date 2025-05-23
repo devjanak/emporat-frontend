@@ -1,0 +1,45 @@
+/* Sidebar transitions */
+.sidebar-enter {
+  transform: translateX(-100%);
+}
+.sidebar-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+.sidebar-exit {
+  transform: translateX(0);
+}
+.sidebar-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms;
+}
+
+/* For collapsed sidebar */
+.sidebar-collapsed .menu-item-text {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.sidebar-expanded .menu-item-text {
+  opacity: 1;
+  width: auto;
+}
+
+/* Submenu animation */
+.submenu-enter {
+  max-height: 0;
+  overflow: hidden;
+}
+.submenu-enter-active {
+  max-height: 500px; /* Arbitrary large value */
+  transition: max-height 300ms;
+}
+.submenu-exit {
+  max-height: 500px;
+}
+.submenu-exit-active {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms;
+} 
